@@ -1,8 +1,15 @@
 #include <stdio.h>
 
-int main()
+int main(int argc, char *argv[])
 {
-	printf("Hello, world!\n");
+	printf("Program name: %s\n", argv[0]);
 
-	return 0;
+	if (argc == 2)
+	{
+		printf("The argument supplied is %s\n", argv[1]);
+	}
+	else
+	{
+		printf("Error: Wrong number of arguments (expected 1)\n");
+	}
 }
